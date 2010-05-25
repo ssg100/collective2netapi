@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DB81A8B-6213-45A1-A233-F7B17D110CAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Collective2</RootNamespace>
+    <AssemblyName>Collective2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C2ATI\AutoTradingInterface.cs" />
+    <Compile Include="C2ATI\Responses\INCOMPLITE\LatestTradingSignalsResponse.cs" />
+    <Compile Include="C2ATI\Responses\LoginResponse.cs" />
+    <Compile Include="C2ATI\Responses\LogOffResponse.cs" />
+    <Compile Include="C2ATI\Responses\Response.cs" />
+    <Compile Include="C2DS\DataServices.cs" />
+    <Compile Include="C2DS\Data\BusinessModel.cs" />
+    <Compile Include="C2DS\Data\EquityQuote.cs" />
+    <Compile Include="C2DS\Data\HistoricalSignal.cs" />
+    <Compile Include="C2DS\Data\HistoricalTrade.cs" />
+    <Compile Include="C2DS\Data\Margin.cs" />
+    <Compile Include="C2DS\Data\Signal.cs" />
+    <Compile Include="C2DS\Data\Stat.cs" />
+    <Compile Include="C2DS\Data\SummaryStats.cs" />
+    <Compile Include="C2DS\Data\SystemInfoShort.cs" />
+    <Compile Include="C2DS\Data\SystemRosterInfo.cs" />
+    <Compile Include="C2DS\Data\Trade.cs" />
+    <Compile Include="C2DS\Data\TradeStyle.cs" />
+    <Compile Include="C2DS\Responses\EquitySeriesResponse.cs" />
+    <Compile Include="C2DS\Responses\INCOMPLITE\CheckInResponse.cs" />
+    <Compile Include="C2DS\Responses\INCOMPLITE\EstablishStatusResponse.cs" />
+    <Compile Include="C2DS\Responses\LogOutResponse.cs" />
+    <Compile Include="C2DS\Responses\OpenPositionsResponse.cs" />
+    <Compile Include="C2DS\Responses\PendingSignalsResponse.cs" />
+    <Compile Include="C2DS\Responses\Response.cs" />
+    <Compile Include="C2DS\Responses\SessionResponse.cs" />
+    <Compile Include="C2DS\Responses\SignalHistoryResponse.cs" />
+    <Compile Include="C2DS\Responses\SubscriptionsResponse.cs" />
+    <Compile Include="C2DS\Responses\SystemOverviewResponse.cs" />
+    <Compile Include="C2DS\Responses\SystemRosterResponse.cs" />
+    <Compile Include="C2DS\Responses\SystemStatsResponse.cs" />
+    <Compile Include="C2DS\Responses\TradeHistoryResponse.cs" />
+    <Compile Include="Core\CoreRequest.cs" />
+    <Compile Include="Core\CoreRequestParam.cs" />
+    <Compile Include="Core\CoreRequestParamCollection.cs" />
+    <Compile Include="Core\CoreResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlDocumentExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="C2ATI\Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
